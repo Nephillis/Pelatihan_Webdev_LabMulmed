@@ -1,64 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryant Hubert || Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lembar Kerja Praktik Tailwind CSS">
+  <title>Latihan Tailwind CSS: Portofolio Web</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header>
-        <div class="navbar-container">
-            <div class="left-header">
-                <a href="#home">Bryant Hubert</a>
-            </div>
-            <div class="right-header">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contacts">Contacts</a>
-            </div>
+
+<body class="bg-slate-50/60 text-slate-800 font-sans min-h-screen antialiased selection:bg-indigo-600 selection:text-white bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] bg-fixed">
+
+  <!-- ========================================================
+       1. NAVIGATION BAR
+       ======================================================== -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="font-bold text-lg tracking-tight text-slate-900 hover:text-indigo-600 transition-colors duration-300">
+        Bryant Hubert
+      </a>
+      <nav class="flex items-center gap-1 sm:gap-2 text-slate-600 font-medium">
+        <a href="#about" class="px-3 py-1.5 rounded-lg text-sm hover:text-indigo-600 hover:bg-slate-100/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">About</a>
+        <a href="#skills" class="px-3 py-1.5 rounded-lg text-sm hover:text-indigo-600 hover:bg-slate-100/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">Skills</a>
+        <a href="#projects" class="px-3 py-1.5 rounded-lg text-sm hover:text-indigo-600 hover:bg-slate-100/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">Projects</a>
+        <a href="#contacts" class="px-3 py-1.5 rounded-lg text-sm hover:text-indigo-600 hover:bg-slate-100/80 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       2. MAIN CONTENT
+       ======================================================== -->
+  <main class="max-w-5xl mx-auto px-6">
+    <section id="home" class="py-16 md:py-28 flex flex-col md:flex-row items-center gap-10 md:gap-16 scroll-mt-24">
+      <div class="relative group shrink-0">
+        <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-500"></div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOOdcwsmSd6EuR-_udt7hjuWTTw534Pb8xjgRVSUH6aMFxZuGUI3MqVtM&s=10" alt="McLovin" class="relative w-36 h-36 md:w-48 md:h-48 rounded-3xl object-cover shadow-xl shadow-slate-200/60 ring-1 ring-slate-900/5 p-1 bg-white group-hover:scale-105 group-hover:-rotate-1 transition-all duration-500 ease-out cursor-pointer">
+      </div>
+
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="text-sm md:text-base font-semibold tracking-widest text-indigo-600 uppercase mb-2">
+          Computer Engineering Student
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-950 leading-tight mb-3">
+          Bryant Hubert
+        </h1>
+
+        <p class="text-base md:text-lg text-slate-600 max-w-xl leading-relaxed font-normal mb-6">
+          Interested in web development and database systems.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm shadow-indigo-500/20 hover:shadow-md hover:shadow-indigo-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+            View Projects
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="#contacts" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-xs hover:border-slate-300 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+            Get in Touch
+          </a>
         </div>
-    </header>
-
-    <hr>
-
-    <section id="home">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVrAhWosD8icdZxqpfHDMqLZfw0SZFbobQSMIuw82QQBr0KrsLl2oRyE&s=10" alt="Logo Lab" width="200px" height="100px">
-        <p>Computer Engineering Student</p>
-        <h1>Bryant Hubert</h1>
-        <p>Interested in Web Development & Database Systems</p>
-    </section>
-<hr>
-    <section id="about">
-        <p>A little about me</p>
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolorem quis fuga quidem vero consequatur labore quos ipsa laborum ducimus adipisci voluptatem ullam odit non ea molestias odio autem rerum.</p>
-    </section>
-    
-<hr>    
-
-    <section id="Skills">
-        <p>What i Work with</p>
-        <h2>Skills</h2>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Javascript</span>
-        <span>Arduino</span>
-    </section>
-<hr>
-    <section id="projects">
-        <h2>My Projects</h2>
-
-    </section>
-<hr>
-    <section id="contacts">
-        <h2>Contacts</h2>
-        <p>Email:<a href="https://mail.google.com/mail/?view=cm&fs=1&to=bryanthubert75@gmail.com&su=Test&body=Test1
-" target="_blank">bryanthubert75@gmail.com</a>
-        <p>Github:<a href="github.com/Nephillis" target="_blank">Github.com/Nephillis</a></p>
-
+      </div>
     </section>
 
+    <!-- ========================================================
+         3. ABOUT ME SECTION
+         ======================================================== -->
+    <section id="about" class="py-16 md:py-24 border-t border-slate-200/80 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start scroll-mt-24">
+      <div class="md:col-span-1 space-y-1.5">
+        <p class="text-xs font-bold uppercase tracking-widest text-indigo-600">A little about me</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">About Me</h2>
+      </div>
+
+      <div class="md:col-span-2 p-6 sm:p-8 rounded-3xl bg-white/90 backdrop-blur-xs border border-slate-200/80 shadow-xs hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 transition-all duration-300">
+        <p class="text-slate-600 text-base md:text-lg leading-relaxed font-normal">
+          Hello! I am currently learning web development from scratch.
+          My goal is to build a personal portfolio website to showcase my profile,
+          skills, and projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. SKILLS SECTION
+         ======================================================== -->
+    <section id="skills" class="py-16 md:py-24 border-t border-slate-200/80 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start scroll-mt-24">
+      <div class="md:col-span-1 space-y-1.5">
+        <p class="text-xs font-bold uppercase tracking-widest text-indigo-600">What I work with</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Skills</h2>
+      </div>
+
+      <div class="md:col-span-2 flex flex-wrap gap-3 items-center">
+        <span class="px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-700 bg-white/90 backdrop-blur-xs border border-slate-200 shadow-xs hover:border-indigo-400 hover:text-indigo-600 hover:bg-indigo-50/40 hover:-translate-y-1 hover:scale-105 hover:shadow-md active:scale-95 transition-all duration-200 cursor-default select-none">HTML</span>
+        <span class="px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-700 bg-white/90 backdrop-blur-xs border border-slate-200 shadow-xs hover:border-indigo-400 hover:text-indigo-600 hover:bg-indigo-50/40 hover:-translate-y-1 hover:scale-105 hover:shadow-md active:scale-95 transition-all duration-200 cursor-default select-none">CSS</span>
+        <span class="px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-700 bg-white/90 backdrop-blur-xs border border-slate-200 shadow-xs hover:border-indigo-400 hover:text-indigo-600 hover:bg-indigo-50/40 hover:-translate-y-1 hover:scale-105 hover:shadow-md active:scale-95 transition-all duration-200 cursor-default select-none">JavaScript</span>
+        <span class="px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-700 bg-white/90 backdrop-blur-xs border border-slate-200 shadow-xs hover:border-indigo-400 hover:text-indigo-600 hover:bg-indigo-50/40 hover:-translate-y-1 hover:scale-105 hover:shadow-md active:scale-95 transition-all duration-200 cursor-default select-none">SQL</span>
+      </div>
+    </section>
+
+    <section id="projects" class="py-16 md:py-24 border-t border-slate-200/80 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start scroll-mt-24">
+      <div class="md:col-span-1 space-y-1.5">
+        <p class="text-xs font-bold uppercase tracking-widest text-indigo-600">Featured Work</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Projects</h2>
+        <p class="text-sm text-slate-500 leading-relaxed pt-1">
+          Recent builds showcasing game logic, interactive graphics, and relational systems.
+        </p>
+      </div>
+
+      <div class="md:col-span-2 grid grid-cols-1 gap-5">
+
+        <article class="group relative p-6 sm:p-7 rounded-3xl bg-white/90 backdrop-blur-xs border border-slate-200/90 shadow-xs hover:shadow-xl hover:shadow-indigo-500/5 hover:border-indigo-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-100">Logic & Rules Engine</span>
+              <span class="text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200 text-lg">&nearr;</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Chess Rebuild</h2>
+            <p class="text-sm text-slate-600 leading-relaxed mt-2.5 mb-4">
+              A complete recreation of chess mechanics, piece path validation, turn management, and checkmate detection algorithms.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">State Machine</span>
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">Board Logic</span>
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">Algorithms</span>
+          </div>
+        </article>
+
+
+        <article class="group relative p-6 sm:p-7 rounded-3xl bg-white/90 backdrop-blur-xs border border-slate-200/90 shadow-xs hover:shadow-xl hover:shadow-indigo-500/5 hover:border-indigo-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-100">Arcade & 2D Physics</span>
+              <span class="text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200 text-lg">&nearr;</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">Space Invaders</h2>
+            <p class="text-sm text-slate-600 leading-relaxed mt-2.5 mb-4">
+              Retro arcade game implemented with smooth animation loops, dynamic sprite rendering, wave escalations, and bounding-box collision detection.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">HTML5 Canvas</span>
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">Game Loop</span>
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">Collision Detection</span>
+          </div>
+        </article>
+
+
+        <article class="group relative p-6 sm:p-7 rounded-3xl bg-white/90 backdrop-blur-xs border border-slate-200/90 shadow-xs hover:shadow-xl hover:shadow-indigo-500/5 hover:border-indigo-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="text-xs font-semibold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-100">System Architecture</span>
+              <span class="text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200 text-lg">&nearr;</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">GOJEK Database Recreation</h2>
+            <p class="text-sm text-slate-600 leading-relaxed mt-2.5 mb-4">
+              Comprehensive relational database architecture modeling multi-service transactions, ride-hailing trips, driver dispatching, merchant orders, and relational normalization.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-100">
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">PostgreSQL / MySQL</span>
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">Schema Normalization</span>
+            <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-lg">Transactions</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacts" class="py-16 md:py-24 border-t border-slate-200/80 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start scroll-mt-24">
+      <div class="md:col-span-1 space-y-1.5">
+        <p class="text-xs font-bold uppercase tracking-widest text-indigo-600">Get in touch</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Contact</h2>
+        <p class="text-sm text-slate-500 leading-relaxed pt-1">
+          Open for software engineering opportunities, collaborative projects, or academic inquiries.
+        </p>
+      </div>
+
+      <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+        <a href="mailto:bryanthubert75@gmail.com" class="group p-5 rounded-2xl bg-white/90 backdrop-blur-xs border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-indigo-400 hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-200 mb-3">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Email</span>
+            <h2 class="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mt-0.5 break-all">bryanthubert75@gmail.com</h2>
+          </div>
+          <span class="text-xs font-medium text-indigo-600 group-hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-1 mt-4">
+            Send Email &rarr;
+          </span>
+        </a>
+
+        <a href="https://github.com/Nephillis" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl bg-white/90 backdrop-blur-xs border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-slate-800 hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-colors duration-200 mb-3">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">GitHub</span>
+            <h2 class="text-sm font-bold text-slate-900 group-hover:text-slate-700 transition-colors mt-0.5">Nephillis</h2>
+          </div>
+          <span class="text-xs font-medium text-slate-700 group-hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-1 mt-4">
+            View Profile &rarr;
+          </span>
+        </a>
+
+        <a href="https://instagram.com/byemm__" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl bg-white/90 backdrop-blur-xs border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-pink-400 hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-pink-50 border border-pink-100 flex items-center justify-center text-pink-600 group-hover:bg-gradient-to-tr group-hover:from-amber-500 group-hover:via-pink-500 group-hover:to-purple-600 group-hover:text-white transition-all duration-200 mb-3">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Instagram</span>
+            <h2 class="text-sm font-bold text-slate-900 group-hover:text-pink-600 transition-colors mt-0.5">@byemm__</h2>
+          </div>
+          <span class="text-xs font-medium text-pink-600 group-hover:translate-x-1 transition-transform duration-200 inline-flex items-center gap-1 mt-4">
+            Connect &rarr;
+          </span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200/80 py-8 mt-12 text-center text-xs text-slate-400">
+    <p>&copy; 2026 Bryant Hubert. Built with Tailwind CSS.</p>
+  </footer>
 </body>
+
 </html>
