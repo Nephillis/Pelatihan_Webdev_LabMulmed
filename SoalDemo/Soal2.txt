@@ -1,0 +1,3 @@
+1. Penggunaan breakpoint md berguna untuk menimpa design (karena tailwind css merupakan mobile-first) lama agar ukuran dari design nya sesuai dengan layar yang sedang digunakan. Tata letak dari website nya melebar menyesuaikan dengan ukuran width dan height dari layar yang digunakan
+
+2. 
